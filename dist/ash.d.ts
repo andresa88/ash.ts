@@ -122,8 +122,6 @@ declare module 'ash.ts/core/Entity' {
     import { Dictionary } from 'ash.ts/Dictionary';
     import { ClassType } from 'ash.ts/Types';
     export class Entity {
-        typeName: string | null;
-        userData: any | null;
         componentAdded: Signal2<Entity, ClassType<any>>;
         componentRemoved: Signal2<Entity, ClassType<any>>;
         nameChanged: Signal2<Entity, string>;

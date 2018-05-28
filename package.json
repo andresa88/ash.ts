@@ -10,7 +10,6 @@
   "typescript": {
     "main": "src/ash/index.ts"
   },
-  "types": "./dist/ash.d.ts",
   "scripts": {
     "build": "bnr build-client",
     "dev": "bnr watch-client",
