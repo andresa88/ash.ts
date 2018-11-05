@@ -55,4 +55,9 @@ export abstract class System
      * @param time The duration, in seconds, of the frame.
      */
     public abstract update( time:number ):void;
+
+    public render( interpolation:number ):void { }
+    
+    public cleanup():void { }
+    
 }

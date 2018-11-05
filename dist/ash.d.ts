@@ -114,6 +114,8 @@ declare module 'ash.ts/core/Engine' {
         removeSystem(system: System): void;
         removeAllSystems(): void;
         update(time: number): void;
+        render(interpolation: number): void;
+        cleanup(): void;
     }
 }
 
@@ -207,6 +209,8 @@ declare module 'ash.ts/core/System' {
         abstract addToEngine(engine: Engine): void;
         abstract removeFromEngine(engine: Engine): void;
         abstract update(time: number): void;
+        render(interpolation: number): void;
+        cleanup(): void;
     }
 }
 

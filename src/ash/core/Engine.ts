@@ -291,4 +291,20 @@ export class Engine
         this.updating = false;
         this.updateComplete.dispatch();
     }
+    
+    public render( interpolation:number ): void 
+    {
+        for( let system:System | null = this.systemList.head; system; system = system.next )
+        {
+            system.render( interpolation );
+        }
+    }
+
+    public cleanup():void
+    {
+        for( let system:System | null = this.systemList.head; system; system = system.next )
+        {
+            system.cleanup();
+        }
+    }
 }
